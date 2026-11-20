@@ -1,6 +1,6 @@
 # Player site
 
-The site at https://databobek.github.io/EvenMoreLinkables/ shows players what Even More Linkables adds and what it needs. It is not part of the mod: `_PublisherPlus.xml` keeps this folder out of the Workshop upload.
+The site at https://bambaryla-mods.github.io/EvenMoreLinkables/ shows players what Even More Linkables adds and what it needs. It is not part of the mod: `_PublisherPlus.xml` keeps this folder out of the Workshop upload.
 
 ## How it works
 

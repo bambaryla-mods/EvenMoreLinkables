@@ -29,8 +29,8 @@ SITE = Path(__file__).resolve().parent
 ROOT = SITE.parent
 BUILD_MARKER = ".eml-site-build"  # written into the output so a rebuild only ever deletes its own folder
 
-GITHUB = "https://github.com/databobek/EvenMoreLinkables"
-SITE_URL = "https://databobek.github.io/EvenMoreLinkables/"  # for link previews
+GITHUB = "https://github.com/bambaryla-mods/EvenMoreLinkables"
+SITE_URL = "https://bambaryla-mods.github.io/EvenMoreLinkables/"  # for link previews
 SCREENSHOT_EXTS = (".png", ".jpg", ".jpeg", ".webp")
 ICON_SIZE = 128
 
