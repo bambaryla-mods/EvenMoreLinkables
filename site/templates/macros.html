@@ -1,0 +1,84 @@
+{# ---------- linkable buildings ---------- #}
+
+{% macro effects(b) %}
+{% for label, v in b.effects %}<span class="effect">+{{ (v * 100)|num(0) }}% {{ label }}</span>{% endfor %}
+{% if b.quality %}<span class="effect">+{{ b.quality }} quality level{{ "s" if b.quality > 1 }}</span>{% endif %}
+{% if b.helper %}<span class="note">Work mode: removes {{ b.helper.reductionAmt|num(0) }} work from an unfinished item within {{ b.helper.radius|num }} tiles every {{ (b.helper.tickInterval / 60)|num(0) }} s instead</span>{% endif %}
+{% endmacro %}
+
+{% macro buildings(rows, page) %}
+{% set target = "generator" if page == "power" else "bench" %}
+<div class="table-scroll"><table class="stats buildings">
+  <thead><tr>
+    <th scope="col">Building</th>
+    <th scope="col">Effect on the linked {{ target }}</th>
+    <th scope="col" title="How many of this building one {{ target }} can link">Max</th>
+    <th scope="col">Placement</th>
+    <th scope="col">Cost</th>
+    <th scope="col">Research</th>
+    {% if page != "power" %}<th scope="col">Links to</th>{% endif %}
+  </tr></thead>
+  <tbody>
+  {% for b in rows %}
+    <tr id="{{ b.label|slug }}">
+      <th scope="row" class="name"><div class="name-wrap">
+        {% if b.icon %}<img src="{{ b.icon }}" alt="" loading="lazy" width="48" height="48">{% else %}<span class="noicon" aria-hidden="true"></span>{% endif %}
+        <div><span class="label">{{ b.label|cap }}</span><span class="badge">{{ b.size }}</span>
+        {% if b.description %}<span class="rdesc">{{ b.description }}</span>{% endif %}</div>
+      </div></th>
+      <td class="wrap">{{ effects(b) }}</td>
+      <td>{{ b.limit }}</td>
+      <td>{% if b.adjacent %}Touching{% else %}Within {{ b.distance|num }} tiles{% endif %}</td>
+      <td class="wrap">{% for name, n in b.cost %}{{ n }} {{ name }}{{ ", " if not loop.last }}{% endfor %}
+        {% if b.power %}<span class="note">Uses {{ b.power|num(0) }} W</span>{% elif page != "power" %}<span class="note">Needs no power</span>{% endif %}</td>
+      <td class="wrap">{{ b.research|join(", ") }}</td>
+      {% if page != "power" %}
+      <td class="wrap">{{ b.benches|join(", ") or "No vanilla bench" }}{% if b.mod_count %}<span class="note">and benches from {{ b.mod_count }} other mod{{ "s" if b.mod_count != 1 }}</span>{% endif %}</td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endmacro %}
+
+{# ---------- research ---------- #}
+
+{% macro research_table(rows) %}
+<div class="table-scroll"><table class="stats research">
+  <thead><tr><th scope="col">Project</th><th scope="col">Cost</th><th scope="col">Tech level</th><th scope="col">Needs</th><th scope="col">Unlocks</th></tr></thead>
+  <tbody>
+  {% for r in rows %}
+    <tr id="{{ r.label|slug }}">
+      <th scope="row" class="name"><span class="label">{{ r.label|cap }}</span>{% if r.description %}<span class="rdesc">{{ r.description }}</span>{% endif %}</th>
+      <td>{{ r.cost|num(0) }}</td>
+      <td>{{ r.tech }}</td>
+      <td class="wrap">{{ r.prerequisites|join(", ") }}</td>
+      <td class="wrap">{{ r.unlocks|join(", ") or "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endmacro %}
+
+{# ---------- other ---------- #}
+
+{% macro mod_list(mods) %}
+<div class="table-scroll"><table class="stats">
+  <thead><tr><th scope="col">Mod</th><th scope="col">Benches</th><th scope="col">Takes</th></tr></thead>
+  <tbody>
+  {% for m in mods %}
+    <tr><td>{{ m.name }}</td><td>{{ m.benches }}</td><td>{{ m.kinds|join(", ") }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endmacro %}
+
+{% macro requirements(deps) %}
+<ul class="deps">
+  {% for d in deps %}<li>{% if d.url %}<a href="{{ d.url }}">{{ d.name }}</a>{% else %}{{ d.name }}{% endif %}</li>{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro screenshot(src, caption) %}
+<figure class="shot"><a href="{{ src }}"><img src="{{ src }}" alt="{{ caption or '' }}" loading="lazy"></a>{% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}</figure>
+{% endmacro %}

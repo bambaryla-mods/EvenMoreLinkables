@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block description %}{{ meta.get("summary") or "A RimWorld mod that adds linkable facilities for workbenches, research benches and generators." }}{% endblock %}
+{% block body %}
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-icons" aria-hidden="true">{% for s in hero_icons %}<img src="{{ s }}" alt="">{% endfor %}</div>
+    <h1 class="hero-title">Even More Linkables</h1>
+    <p class="tagline">{{ meta.get("tagline", "") }}</p>
+    <p class="cta">
+      <a class="btn primary" href="{{ workshop }}">Steam Workshop</a>
+      <a class="btn" href="{{ github }}">GitHub</a>
+    </p>
+  </div>
+</section>
+<main id="main" class="home">
+  <div class="home-intro">{{ content }}</div>
+  <h2 class="cards-head">What's in the mod</h2>
+  <div class="cards">
+    {% for c in cards %}
+    <a class="card" href="{{ c.slug }}.html">
+      <div class="thumb">{% for s in c.icons %}<img src="{{ s }}" alt="" loading="lazy">{% endfor %}</div>
+      <span class="card-group">{{ c.group }}</span>
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.summary }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}
