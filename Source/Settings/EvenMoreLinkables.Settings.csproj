@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>EvenMoreLinkables.Settings</AssemblyName>
+    <RootNamespace>EvenMoreLinkables.Settings</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\1.7\VEF\Assemblies\</OutputPath>
+    <!-- Where the 1.7 build of Vanilla Expanded Framework lives; override with -p:VEFPath=... -->
+    <VEFPath Condition="'$(VEFPath)' == ''">C:\Users\mateusz\source\repos\VanillaExpandedFramework\1.7\Assemblies\</VEFPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <Reference Include="0ModSettingsFramework">
+      <HintPath>$(VEFPath)0ModSettingsFramework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="EvenMoreLinkables">
+      <HintPath>..\..\1.7\Assemblies\EvenMoreLinkables.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

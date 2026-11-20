@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <ResearchTabDef>
+    <defName>HobbesLinkResearch</defName>
+    <label>linkable research</label>
+    <generalTitle>Linkables research projects</generalTitle>
+    <generalDescription>Research special linkables for workshop, lab, and power improvements in their own tab.</generalDescription>
+  </ResearchTabDef>
+
   <ResearchProjectDef>
     <defName>HobbesLink_WorkshopErgonomics</defName>
     <label>workshop ergonomics</label>
     <description>Standardized workstation layouts, safer handling fixtures, and throughput-focused process design for linked workshop tooling.</description>
-    <baseCost>900</baseCost>
+    <baseCost>600</baseCost>
     <techLevel>Industrial</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>Smithing</li>
       <li>Machining</li>
@@ -16,8 +26,11 @@
     <defName>HobbesLink_PrecisionMachining</defName>
     <label>precision machining networks</label>
     <description>Coordinates precision tools, sterilization modules, and process cleanup units around central benches for reliable quality and speed gains.</description>
-    <baseCost>1600</baseCost>
+    <baseCost>1067</baseCost>
     <techLevel>Industrial</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>HobbesLink_WorkshopErgonomics</li>
       <li>MicroelectronicsBasics</li>
@@ -28,8 +41,11 @@
     <defName>HobbesLink_AutomatedFabricationLinks</defName>
     <label>automated fabrication links</label>
     <description>Integrates robotic assistants and advanced fabrication peripherals into linked production cells.</description>
-    <baseCost>2600</baseCost>
+    <baseCost>1733</baseCost>
     <techLevel>Spacer</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>HobbesLink_PrecisionMachining</li>
       <li>Fabrication</li>
@@ -41,8 +57,11 @@
     <defName>HobbesLink_GridConditioning</defName>
     <label>grid conditioning</label>
     <description>Introduces smarter regulation hardware to stabilize and improve generator-side power delivery.</description>
-    <baseCost>1200</baseCost>
+    <baseCost>800</baseCost>
     <techLevel>Industrial</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>Electricity</li>
       <li>MicroelectronicsBasics</li>
@@ -53,8 +72,11 @@
     <defName>HobbesLink_ThermalPowerManagement</defName>
     <label>thermal power management</label>
     <description>Applies advanced thermal balancing and cooling discipline to power generation infrastructure.</description>
-    <baseCost>2000</baseCost>
+    <baseCost>1333</baseCost>
     <techLevel>Industrial</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>HobbesLink_GridConditioning</li>
       <li>Machining</li>
@@ -65,8 +87,11 @@
     <defName>HobbesLink_SpacerPowerCoupling</defName>
     <label>spacer power coupling</label>
     <description>Enables high-energy spacer-grade coupling systems for generator amplification at significant material and infrastructure cost.</description>
-    <baseCost>3600</baseCost>
+    <baseCost>2400</baseCost>
     <techLevel>Spacer</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>HobbesLink_ThermalPowerManagement</li>
       <li>AdvancedFabrication</li>
@@ -77,8 +102,11 @@
     <defName>HobbesLink_LabUtilities</defName>
     <label>laboratory utilities</label>
     <description>Establishes linked utility instruments for routine assay preparation and support workflows.</description>
-    <baseCost>1100</baseCost>
+    <baseCost>733</baseCost>
     <techLevel>Industrial</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>Machining</li>
       <li>MicroelectronicsBasics</li>
@@ -89,8 +117,11 @@
     <defName>HobbesLink_LabElectronics</defName>
     <label>lab electronics integration</label>
     <description>Coordinates digital instrumentation and data systems across linked research benches.</description>
-    <baseCost>1900</baseCost>
+    <baseCost>1267</baseCost>
     <techLevel>Industrial</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>HobbesLink_LabUtilities</li>
       <li>MicroelectronicsBasics</li>
@@ -101,8 +132,11 @@
     <defName>HobbesLink_AdvancedResearchFacilities</defName>
     <label>advanced research facilities</label>
     <description>Unlocks larger, high-throughput linked laboratory infrastructure for late-stage scientific programs.</description>
-    <baseCost>3200</baseCost>
+    <baseCost>2133</baseCost>
     <techLevel>Spacer</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+    <tab>HobbesLinkResearch</tab>
     <prerequisites>
       <li>HobbesLink_LabElectronics</li>
       <li>Fabrication</li>

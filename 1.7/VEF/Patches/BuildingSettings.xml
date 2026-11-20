@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Adds the per-building settings page (Options > Mod settings) through Vanilla Expanded Framework. -->
+  <Operation Class="EvenMoreLinkables.Settings.PatchOperationBuildingSettings">
+    <id>EvenMoreLinkables_BuildingSettings</id>
+    <label>Buildings</label>
+  </Operation>
+
+</Patch>

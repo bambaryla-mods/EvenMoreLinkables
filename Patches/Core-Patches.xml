@@ -2,7 +2,7 @@
 <Patch>
 
 
-	<Operation Class="PatchOperationAddModExtension">
+	<!-- <Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName = "MeleeWeapon_Knife"]</xpath>
 		<value>
 			<li Class="EvenMoreLinkables.RequiredLinkablesToCraft">
@@ -11,7 +11,7 @@
 				</requiredLinkables>
 			</li>
 		</value>
-	</Operation>
+	</Operation> -->
 
 </Patch>
 

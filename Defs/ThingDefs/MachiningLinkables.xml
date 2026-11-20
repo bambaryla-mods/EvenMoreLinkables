@@ -4,7 +4,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_CNCMachine</defName>
     <label>CNC machine</label>
-    <description>Improves linked workbench work speed by 35% when placed directly adjacent. Limit 1 per workbench.\n\nThis state-of-the-art CNC (computer numerical control) machine expertly guides tools and parts with computer precision, fashioning meticulous components for your projects.</description>
+    <description>Must be placed directly adjacent. Limit 1 per workbench.\n\nThis state-of-the-art CNC (computer numerical control) machine expertly guides tools and parts with computer precision, fashioning meticulous components for your projects.</description>
     <graphicData>
       <texPath>Things/Buildings/Machining/1_CNCMachine/CNCMachine</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -33,7 +33,7 @@
       </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.35</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.50</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -45,7 +45,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_3DPrinter</defName>
     <label>3D printer</label>
-    <description>Improves linked workbench work speed by 30% when placed directly adjacent. Limit 2 per workbench.\n\n Harnessing a digital model to build a tangible object through layered materials, this 3D printer accelerates construction, saving valuable time in the process.</description>
+    <description>Must be placed directly adjacent. Limit 2 per workbench.\n\n Harnessing a digital model to build a tangible object through layered materials, this 3D printer accelerates construction, saving valuable time in the process.</description>
     <graphicData>
       <texPath>Things/Buildings/Machining/2_3DPrinter/3DPrinter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -69,7 +69,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.30</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.50</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -86,7 +86,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_RobotAssistant</defName>
     <label>robot assistant</label>
-    <description>Improves linked workbench work speed by 65% when placed directly adjacent. Limit 1 per workbench.\n\nThis industrial-grade robot, designed for assembly, welding, painting, and packaging, provides a substantial lift. With switchable modes, "Boost" operates as a standard linkable, while the alternate mode periodically reduces remaining work on tasks around the connected workbench.</description>
+    <description>Must be placed directly adjacent. Limit 1 per workbench.\n\nThis industrial-grade robot, designed for assembly, welding, painting, and packaging, provides a substantial lift. With switchable modes, "Boost" operates as a standard linkable, while the alternate mode periodically reduces remaining work on tasks around the connected workbench.</description>
     <uiIconPath>Things/Buildings/Machining/3_RobotAss/RobotAss_Full</uiIconPath>
     <graphicData>
       <texPath>Things/Buildings/Machining/3_RobotAss/RobotAss</texPath>
@@ -118,7 +118,7 @@
       </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.65</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>1.0</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -143,7 +143,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_Lathe</defName>
     <label>lathe</label>
-    <description>Improves linked workbench work speed by 22%. Limit 1 per workbench.\n\nThis lathe, a true workshop companion, effortlessly rotates workpieces, skillfully handling turning, facing, drilling, knurling, and threading operations with precision.</description>
+    <description>Limit 1 per workbench.\n\nThis lathe, a true workshop companion, effortlessly rotates workpieces, skillfully handling turning, facing, drilling, knurling, and threading operations with precision.</description>
     <graphicData>
       <texPath>Things/Buildings/Machining/4_Lathe/Lathe</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -167,7 +167,7 @@
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.22</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.30</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <maxDistance>4</maxDistance>
@@ -184,7 +184,7 @@
     <defName>HobbesLink_Spacer_Lathe</defName>
     <label>spacer lathe</label>
     <staticSunShadowHeight>0</staticSunShadowHeight>
-    <description>Improves linked workbench work speed by 40%. Limit 1 per workbench.\n\nInfusing cutting-edge spacer technology, this lathe elevates precision and efficiency, seamlessly linking with diverse workstations for a notable surge in overall productivity.</description>
+    <description>Limit 1 per workbench.\n\nInfusing cutting-edge spacer technology, this lathe elevates precision and efficiency, seamlessly linking with diverse workstations for a notable surge in overall productivity.</description>
     <uiIconPath>UI/Prop_3HSTLathe</uiIconPath>
     <uiIconScale>1.15</uiIconScale>
     <graphicData>
@@ -215,7 +215,7 @@
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.40</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.60</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <maxDistance>4</maxDistance>
@@ -231,7 +231,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_Vice</defName>
     <label>vice</label>
-    <description>Improves linked workbench work speed by 4%. Limit 2 per workbench.\n\nCrafted as a mechanical anchor, this device ensures a firm grip on objects during tasks, significantly amplifying work speed with its steadfast reliability.</description>
+    <description>Limit 2 per workbench.\n\nCrafted as a mechanical anchor, this device ensures a firm grip on objects during tasks, significantly amplifying work speed with its steadfast reliability.</description>
     <uiIconScale>0.75</uiIconScale>
     <graphicData>
       <texPath>Things/Buildings/Machining/5_Vice/Vice</texPath>
@@ -254,7 +254,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.04</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <maxDistance>4</maxDistance>
@@ -265,7 +265,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_Autoclave</defName>
     <label>autoclave</label>
-    <description>Improves linked research speed by 7%. Limit 2 per workbench.\n\nHarnessing potent steam pressure for sterilization, this autoclave accelerates research by eradicating bacteria, viruses, and microorganisms, ensuring a hygienic environment that fosters expedited scientific advancements.</description>
+    <description>Limit 2 per workbench.\n\nHarnessing potent steam pressure for sterilization, this autoclave accelerates research by eradicating bacteria, viruses, and microorganisms, ensuring a hygienic environment that fosters expedited scientific advancements.</description>
     <uiIconScale>1.75</uiIconScale>
     <uiIconPath>UI/Autoclave</uiIconPath>
     <graphicData>
@@ -289,7 +289,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <ResearchSpeedFactor>0.07</ResearchSpeedFactor>
+          <ResearchSpeedFactor>0.10</ResearchSpeedFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <maxDistance>16</maxDistance>
@@ -305,7 +305,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_Centrifuge</defName>
     <label>centrifuge</label>
-    <description>Improves linked research speed by 10% and linked work speed by 3%. Limit 1 per workbench.\n\nEmploying centrifugal force for precise particle and liquid separation, this equipment streamlines workflows, providing an elevated efficiency that seamlessly integrates into diverse operational processes.</description>
+    <description>Limit 1 per workbench.\n\nEmploying centrifugal force for precise particle and liquid separation, this equipment streamlines workflows, providing an elevated efficiency that seamlessly integrates into diverse operational processes.</description>
     <uiIconScale>1.75</uiIconScale>
     <uiIconPath>UI/Centrifuge</uiIconPath>
     <graphicData>
@@ -329,8 +329,8 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <ResearchSpeedFactor>0.10</ResearchSpeedFactor>
-          <WorkTableWorkSpeedFactor>0.03</WorkTableWorkSpeedFactor>
+          <ResearchSpeedFactor>0.15</ResearchSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <maxDistance>4</maxDistance>
@@ -346,7 +346,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_LaserEngraver</defName>
     <label>laser engraver</label>
-    <description>Improves linked production quality by +1 when placed directly adjacent to a workbench. Limit 1 per workbench.\n\nThis machine employs a laser beam to delicately engrave or cut intricate designs onto an array of materials, including wood, metal, glass, and plastic, showcasing its versatility across various crafting endeavors.</description>
+    <description>Must be placed directly adjacent to a workbench. Limit 1 per workbench.\n\nThis machine employs a laser beam to delicately engrave or cut intricate designs onto an array of materials, including wood, metal, glass, and plastic, showcasing its versatility across various crafting endeavors.</description>
     <graphicData>
       <texPath>Things/Buildings/Machining/8_LaserEngraver/LaserEngraver</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -384,7 +384,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_IndustrialOven</defName>
     <label>industrial oven</label>
-    <description>Improves linked workbench work speed by 8% when placed directly adjacent. Limit 1 per workbench.\n\nGeared for heightened productivity, this oven seamlessly connects to various processing stations, boosting efficiency with versatile compatibility across different stages of operation.</description>
+    <description>Must be placed directly adjacent. Limit 1 per workbench.\n\nGeared for heightened productivity, this oven seamlessly connects to various processing stations, boosting efficiency with versatile compatibility across different stages of operation.</description>
     <uiIconScale>0.75</uiIconScale>
     <staticSunShadowHeight>0</staticSunShadowHeight>
     <fillPercent>0.9</fillPercent>
@@ -413,7 +413,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.08</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.10</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -430,7 +430,7 @@
     <defName>HobbesLink_ConveyorBelt</defName>
     <label>conveyor belt</label>
     <staticSunShadowHeight>0</staticSunShadowHeight>
-    <description>Improves linked workbench work speed by 10% when placed directly adjacent. Limit 1 per workbench.\n\nTailored for efficient manufacturing, this conveyor seamlessly links with diverse machining tables, accelerating work speed and fostering a dynamic workflow for heightened productivity.</description>
+    <description>Must be placed directly adjacent. Limit 1 per workbench.\n\nTailored for efficient manufacturing, this conveyor seamlessly links with diverse machining tables, accelerating work speed and fostering a dynamic workflow for heightened productivity.</description>
     <uiIconScale>1.05</uiIconScale>
     <fillPercent>0.9</fillPercent>
     <rotatable>true</rotatable>
@@ -457,7 +457,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.10</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.15</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -473,7 +473,7 @@
   <ThingDef ParentName="HobbesLinkMachining_Base">
     <defName>HobbesLink_Incinerator</defName>
     <label>incinerator</label>
-    <description>Improves linked work speed by 10% and linked research speed by 4%. Limit 1 per workbench.\n\nThis device efficiently burns waste at high temperatures, minimizing solid waste volume and transforming it into ash, flue gas, and heat. Additionally, it ensures a clean and sanitized environment, enhancing the overall room cleanliness.</description>
+    <description>Limit 1 per workbench.\n\nThis device efficiently burns waste at high temperatures, minimizing solid waste volume and transforming it into ash, flue gas, and heat. Additionally, it ensures a clean and sanitized environment, enhancing the overall room cleanliness.</description>
     <graphicData>
       <texPath>Things/Buildings/Machining/9_Incinerator/Incinerator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -494,8 +494,8 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <ResearchSpeedFactor>0.04</ResearchSpeedFactor>
-          <WorkTableWorkSpeedFactor>0.10</WorkTableWorkSpeedFactor>
+          <ResearchSpeedFactor>0.05</ResearchSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.15</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <maxDistance>6</maxDistance>

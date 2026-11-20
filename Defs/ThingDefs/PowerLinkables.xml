@@ -4,7 +4,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_CoolingModule</defName>
     <label>cooling module</label>
-    <description>Improves power output by 25%. Limit 2 per generator.\n\nThis power plant cooling module efficiently cools hot water or steam, ensuring it condenses back into reusable water. It adeptly manages waste heat, maintaining optimal temperatures to keep the power plant running smoothly.</description>
+    <description>Limit 2 per generator.\n\nThis power plant cooling module efficiently cools hot water or steam, ensuring it condenses back into reusable water. It adeptly manages waste heat, maintaining optimal temperatures to keep the power plant running smoothly.</description>
     <tickerType>Long</tickerType>
     <uiIconPath>UI/CoolingModule</uiIconPath>
     <uiIconScale>1.85</uiIconScale>
@@ -30,7 +30,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.25</PowerOutputFactor>
+          <PowerOutputFactor>0.4</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <maxDistance>8</maxDistance>
@@ -41,7 +41,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Alternator</defName>
     <label>alternator</label>
-    <description>Improves power output by 14%. Limit 2 per generator.\n\nThis alternator is a dynamic electrical generator, seamlessly transforming mechanical energy into the essential alternating current (AC) electrical power for your systems.</description>
+    <description>Limit 2 per generator.\n\nThis alternator is a dynamic electrical generator, seamlessly transforming mechanical energy into the essential alternating current (AC) electrical power for your systems.</description>
     <uiIconPath>UI/Alternator</uiIconPath>
     <uiIconScale>2</uiIconScale>
     <graphicData>
@@ -65,7 +65,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.14</PowerOutputFactor>
+          <PowerOutputFactor>0.2</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <maxDistance>8</maxDistance>
@@ -76,7 +76,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Pylon</defName>
     <label>power pylon</label>
-    <description>Improves power output by 3%. Limit 12 per generator.\n\nThis power pylon, a vital link, enhances the efficiency of connected power-producing structures. It optimizes energy flow for improved overall performance.</description>
+    <description>Limit 12 per generator.\n\nThis power pylon, a vital link, enhances the efficiency of connected power-producing structures. It optimizes energy flow for improved overall performance.</description>
     <uiIconPath>UI/3HSTPowerPylon</uiIconPath>
     <graphicData>
       <texPath>Things/Buildings/Power/3HSTPowerPylon</texPath>
@@ -100,7 +100,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.03</PowerOutputFactor>
+          <PowerOutputFactor>0.05</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>12</maxSimultaneous>
         <maxDistance>4</maxDistance>
@@ -111,7 +111,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_BreakerBox</defName>
     <label>breaker box</label>
-    <description>Improves power output by 4% when placed directly adjacent to a power generator. Limit 1 per generator.\n\nThis breaker box, when strategically positioned near a power generator, significantly boosts its efficiency. Acting as a key element, it optimizes power distribution for enhanced functionality in your electrical network.</description>
+    <description>Must be placed directly adjacent to a power generator. Limit 1 per generator.\n\nThis breaker box, when strategically positioned near a power generator, significantly boosts its efficiency. Acting as a key element, it optimizes power distribution for enhanced functionality in your electrical network.</description>
     <graphicData>
       <texPath>Things/Buildings/Power/3HSTBreakerBox</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -133,7 +133,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.04</PowerOutputFactor>
+          <PowerOutputFactor>0.05</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -144,7 +144,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_CoolingTower</defName>
     <label>cooling tower</label>
-    <description>Improves power output by 35% when placed directly adjacent to a power generator. Limit 2 per generator.\n\nThis cooling tower is a powerhouse in enhancing generator efficiency. Skillfully regulating temperatures, it ensures optimal performance, making it an indispensable component for your power generation network.</description>
+    <description>Must be placed directly adjacent to a power generator. Limit 2 per generator.\n\nThis cooling tower is a powerhouse in enhancing generator efficiency. Skillfully regulating temperatures, it ensures optimal performance, making it an indispensable component for your power generation network.</description>
     <uiIconScale>0.7</uiIconScale>
     <fillPercent>1</fillPercent>
     <graphicData>
@@ -176,7 +176,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.35</PowerOutputFactor>
+          <PowerOutputFactor>0.6</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -187,7 +187,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Transformer</defName>
     <label>transformer</label>
-    <description>Improves power output by 15%. Limit 2 per generator.\n\nThis transformer seamlessly transfers energy between circuits through electromagnetic induction. By adeptly adjusting voltage levels, it enables efficient transmission and distribution of electrical power across long distances, a cornerstone for effective energy management.</description>
+    <description>Limit 2 per generator.\n\nThis transformer seamlessly transfers energy between circuits through electromagnetic induction. By adeptly adjusting voltage levels, it enables efficient transmission and distribution of electrical power across long distances, a cornerstone for effective energy management.</description>
     <uiIconPath>UI/Transformer</uiIconPath>
     <uiIconScale>1.5</uiIconScale>
     <graphicData>
@@ -211,7 +211,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.15</PowerOutputFactor>
+          <PowerOutputFactor>0.2</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <maxDistance>8</maxDistance>
@@ -222,7 +222,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Spacer_LiquidPower</defName>
     <label>spacer liquid power booster</label>
-    <description>Improves power output by 32% when placed directly adjacent to a power generator. Limit 2 per generator.\n\nThis spacer liquid power booster employs electrically negative liquids, elevating generator performance. As a cutting-edge device, it optimizes power output, ensuring a dynamic enhancement to your energy generation capabilities.</description>
+    <description>Must be placed directly adjacent to a power generator. Limit 2 per generator.\n\nThis spacer liquid power booster employs electrically negative liquids, elevating generator performance. As a cutting-edge device, it optimizes power output, ensuring a dynamic enhancement to your energy generation capabilities.</description>
     <uiIconScale>1.25</uiIconScale>
     <uiIconPath>UI/Prop_3HSTPBM</uiIconPath>
     <fillPercent>0.6</fillPercent>
@@ -253,7 +253,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.32</PowerOutputFactor>
+          <PowerOutputFactor>0.5</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -264,7 +264,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Spacer_Transformer</defName>
     <label>spacer transformer</label>
-    <description>Improves power output by 60% when placed directly adjacent to a power generator. Limit 1 per generator.\n\nThis spacer transformer seamlessly transfers energy between quantum circuits through electroquantumic induction. By dynamically adjusting voltage levels, it facilitates the efficient transmission and distribution of electrical power over extended distances, revolutionizing energy management in your advanced systems.</description>
+    <description>Must be placed directly adjacent to a power generator. Limit 1 per generator.\n\nThis spacer transformer seamlessly transfers energy between quantum circuits through electroquantumic induction. By dynamically adjusting voltage levels, it facilitates the efficient transmission and distribution of electrical power over extended distances, revolutionizing energy management in your advanced systems.</description>
     <uiIconScale>1.35</uiIconScale>
     <uiIconPath>UI/Prop_3HSTfusionGenerator</uiIconPath>
     <fillPercent>0.6</fillPercent>
@@ -294,7 +294,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.60</PowerOutputFactor>
+          <PowerOutputFactor>1</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -305,7 +305,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Spacer_CoolantPump</defName>
     <label>spacer coolant pump</label>
-    <description>Improves power output by 30% when placed directly adjacent to a power generator. Limit 2 per generator.\n\nThis spacer coolant pump is a game-changer for power generators. It empowers them to enhance effectiveness by efficiently managing temperatures. A crucial component in your advanced system, this pump ensures optimal performance and longevity.</description>
+    <description>Must be placed directly adjacent to a power generator. Limit 2 per generator.\n\nThis spacer coolant pump is a game-changer for power generators. It empowers them to enhance effectiveness by efficiently managing temperatures. A crucial component in your advanced system, this pump ensures optimal performance and longevity.</description>
     <uiIconScale>1.35</uiIconScale>
     <uiIconPath>UI/Prop_3HSTPump</uiIconPath>
     <fillPercent>0.5</fillPercent>
@@ -335,7 +335,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.30</PowerOutputFactor>
+          <PowerOutputFactor>0.5</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -346,7 +346,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Spacer_Console</defName>
     <label>spacer power console</label>
-    <description>Improves power output by 18% when placed directly adjacent to a power generator. Limit 1 per generator.\n\nThis spacer power generator console, intricately linked, empowers advanced programming to optimize generator effectiveness. A technological marvel, it enables precision control, unlocking peak performance for your power generation system.</description>
+    <description>Must be placed directly adjacent to a power generator. Limit 1 per generator.\n\nThis spacer power generator console, intricately linked, empowers advanced programming to optimize generator effectiveness. A technological marvel, it enables precision control, unlocking peak performance for your power generation system.</description>
     <staticSunShadowHeight>0</staticSunShadowHeight>
     <uiIconPath>UI/Prop_3HSTServerConsole</uiIconPath>
     <uiIconScale>1.75</uiIconScale>
@@ -378,7 +378,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.18</PowerOutputFactor>
+          <PowerOutputFactor>0.25</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -389,7 +389,7 @@
   <ThingDef ParentName="HobbesLinkPower_Base">
     <defName>HobbesLink_Spacer_Condensator</defName>
     <label>spacer condensator</label>
-    <description>Improves power output by 8%. Limit 3 per generator.\n\nThis spacer intelligent condensator module utilizes static recurrency in electrical generators. Its intelligent design significantly boosts their effectiveness, serving as a key component for enhanced performance in your advanced technological landscape.</description>
+    <description>Limit 3 per generator.\n\nThis spacer intelligent condensator module utilizes static recurrency in electrical generators. Its intelligent design significantly boosts their effectiveness, serving as a key component for enhanced performance in your advanced technological landscape.</description>
     <uiIconScale>0.9</uiIconScale>
     <graphicData>
       <texPath>Things/Buildings/Power/Abandoned3HSTBarrel/Abandoned3HSTBarrel</texPath>
@@ -417,7 +417,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <PowerOutputFactor>0.08</PowerOutputFactor>
+          <PowerOutputFactor>0.10</PowerOutputFactor>
         </statOffsets>
         <maxSimultaneous>3</maxSimultaneous>
         <maxDistance>8</maxDistance>
